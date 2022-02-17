@@ -1,0 +1,53 @@
+.container {
+	display: grid;
+	/* grid-template-columns: auto auto auto; */
+	column-gap: 10px;
+
+	grid-template-areas:
+		'poster title'
+		'poster plot'
+		'poster rating';
+
+	width: 400px;
+
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+.title {
+	grid-area: title;
+	justify-self: center;
+
+	margin: 10px 0px 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+.poster {
+	grid-area: poster;
+
+	margin: 10px 0px 10px 10px;
+	border: 0px;
+	padding: 0px;
+}
+
+.posterimage {
+	height: auto;
+	width: auto;
+	max-width: 200px;
+	max-height: 200px;
+}
+
+.plot {
+	grid-area: plot;
+	margin: 0px 15px 5px 0px;
+	border: 0px;
+	padding: 0px;
+	text-align: justify;
+}
+
+.rating {
+	grid-area: rating;
+	justify-self: center;
+}

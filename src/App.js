@@ -1,7 +1,13 @@
+import AllMoviesPage from './pages/AllMovies';
 
 function App() {
   return (
-   <div>Clean React App</div>
+    <div>
+      <h1>Movie Review App</h1>
+      <div>
+        <AllMoviesPage />
+      </div>
+    </div>
   );
 }
 
