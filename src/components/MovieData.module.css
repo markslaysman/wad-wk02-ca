@@ -8,7 +8,7 @@
 		'poster plot'
 		'poster rating';
 
-	width: 400px;
+	width: 50vw;
 
 	margin: 0px;
 	border: 0px;
@@ -19,14 +19,13 @@
 	grid-area: title;
 	justify-self: center;
 
-	margin: 10px 0px 0px;
+	margin: 10px 0px 10px 0px;
 	border: 0px;
 	padding: 0px;
 }
 
 .poster {
 	grid-area: poster;
-
 	margin: 10px 0px 10px 10px;
 	border: 0px;
 	padding: 0px;
@@ -35,8 +34,8 @@
 .posterimage {
 	height: auto;
 	width: auto;
-	max-width: 200px;
-	max-height: 200px;
+	max-width: 400px;
+	max-height: 400px;
 }
 
 .plot {
@@ -50,4 +49,5 @@
 .rating {
 	grid-area: rating;
 	justify-self: center;
+	margin: 10px 0px 10px 0px;
 }

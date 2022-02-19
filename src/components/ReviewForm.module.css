@@ -1,0 +1,38 @@
+.container {
+	background-color: blanchedalmond;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 40vw;
+	height: 100%;
+
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+.reviewtitle {
+	justify-self: center;
+
+	margin: 10px 0px 10px 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+.reviewtextarea {
+	flex-grow: 1;
+	width: 90%;
+}
+.reviewformtext {
+	width: 90%;
+	height: 97%;
+}
+
+.reviewbutton {
+	grid-area: rating;
+	justify-self: center;
+
+	margin: 0px 0px 10px 0px;
+}

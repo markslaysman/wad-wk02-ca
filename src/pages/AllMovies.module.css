@@ -1,0 +1,15 @@
+.moviecontent {
+	display: flex;
+	justify-content: center;
+}
+
+.pagetitle {
+	display: flex;
+	justify-content: center;
+}
+
+.reviewsarea {
+	margin: 20px 0px 0px 0px;
+	display: flex;
+	justify-content: center;
+}

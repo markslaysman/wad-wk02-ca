@@ -1,9 +1,11 @@
+// React Imports
+
+// My Imports
 import classes from './MovieData.module.css';
 import Card from './globalui/Card';
 
-
-
 function MovieData (props) {
+
     return (
         <Card>
             <div className={classes.container}>
@@ -11,18 +13,15 @@ function MovieData (props) {
                     {props.title}
                 </div>
                 <div className={classes.poster}>
-                    <img className={classes.posterimage} src={props.image} alt={props.title}/>
+                    <img className={classes.posterimage} src={props.image} alt={props.title} />
                 </div>
                 <div className={classes.plot}>
-                    {props.shortplot}
-                    {/* {props.fullplot} */ }
+                    {/*  {props.shortplot} */ }
+                    {props.fullplot}
                 </div>
                 <div className={classes.rating}>
-                    {props.rating}
+                    Overall Rating: {props.rating} / 5
                 </div>
-                
-
-                
             </div>
         </Card>
     );
