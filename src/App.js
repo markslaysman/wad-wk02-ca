@@ -3,14 +3,14 @@ import { Routes, Route } from 'react-router-dom';
 
 // My Imports
 import AllMoviesPage from './pages/AllMovies';
-import ReviewPage from './pages/MovieReview';
+import LoadingPage from './pages/LoadingPage';
 
 function App() {
   return (
     <div>
       <Routes>
         <Route path='/' element={<AllMoviesPage />} />
-        <Route path='/review' element={<ReviewPage />} />
+        <Route path='/loadingpage' element={<LoadingPage />} />
       </Routes>
     </div>
   );

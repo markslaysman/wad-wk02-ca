@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 
-
 import classes from './ReviewForm.module.css';
 import Card from './globalui/Card';
 
@@ -26,7 +25,6 @@ function ReviewForm (props) {
 
         props.onAddReview(newReviewData);
     }
-
 
     return (
         <Card>

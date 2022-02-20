@@ -6,7 +6,6 @@ import classes from './MovieData.module.css';
 import Card from './globalui/Card';
 import Review from './Review';
 import ReviewForm from './ReviewForm';
-import { Navigate } from 'react-router-dom';
 
 function MovieData (props) {
     const navigate = useNavigate();
@@ -15,9 +14,6 @@ function MovieData (props) {
     function addReviewHandler(reviewData) {
         currentReviews.push(reviewData);
 
-        console.log(JSON.stringify({
-            "moviewreviews" : currentReviews
-        }))
         const url = `https://moviereview-9ec1c-default-rtdb.firebaseio.com/movielist/${props.id}.json/`;
 
         fetch (
@@ -34,55 +30,47 @@ function MovieData (props) {
                 }
             }
         ).then(() => {
-            navigate('/');
+            navigate('/loadingpage');
         });
     }
 
     return (
-    <section>
-        <Card>
-            <div className={classes.container}>
-                <div className={classes.title}>
-                    {props.title}
+        <section>
+            <Card>
+                <div className={classes.container}>
+                    <div className={classes.title}>
+                        {props.title}
+                    </div>
+                    <div className={classes.poster}>
+                        <img className={classes.posterimage} src={props.image} alt={props.title} />
+                    </div>
+                    <div className={classes.plot}>
+                        {/*  {props.shortplot} */ }
+                        {props.fullplot}
+                    </div>
+                    <div className={classes.rating}>
+                        Overall Rating: {props.rating} / 5
+                    </div>
                 </div>
-                <div className={classes.poster}>
-                    <img className={classes.posterimage} src={props.image} alt={props.title} />
-                </div>
-                <div className={classes.plot}>
-                    {/*  {props.shortplot} */ }
-                    {props.fullplot}
-                </div>
-                <div className={classes.rating}>
-                    Overall Rating: {props.rating} / 5
-                </div>
+            </Card>
+
+            <div>
+                {props.moviereviews.map((review) => (
+                    <Review
+                        key={review.reviewername} 
+                        reviewername={review.reviewername}
+                        reviewdate={review.reviewdate}
+                        reviewtext={review.reviewtext}
+                        reviewrating={review.reviewrating}
+                    />
+                ))}
             </div>
-        </Card>
 
-        <div>
-            {props.moviereviews.map((review) => (
-                <Review
-                    key={review.reviewername} 
-                    reviewername={review.reviewername}
-                    reviewdate={review.reviewdate}
-                    reviewtext={review.reviewtext}
-                    reviewrating={review.reviewrating}
-                />
-            ))}
-        </div>
+            <div>
+                <ReviewForm onAddReview={addReviewHandler} />
+            </div>
 
-        <div>
-            <ReviewForm onAddReview={addReviewHandler} />
-        </div>
-
-
-    </section>
-
-
-
-
-
-
-        
+        </section>
     );
 }
 

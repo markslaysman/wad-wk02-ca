@@ -1,7 +1,6 @@
 import MovieData from '../components/MovieData';
 
 function ReviewPage (props) {
-    console.log ("props passed to review: " + props);
     return (
         <section>
             <h1>Add Movie Review</h1>
