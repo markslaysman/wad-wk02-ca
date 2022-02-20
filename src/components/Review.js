@@ -1,15 +1,15 @@
 import classes from './Review.module.css'
 import Card from './globalui/Card';
 
-function Review () {
+function Review (props) {
     return (
-        <Card>
-            <div className={classes.reviewdata}>
-                <div>REVIEW DATE</div>
-                <div>RATING</div>
-                <div>TEXT</div>
-            </div>
-        </Card>
+         <div className={classes.reviewdata}>
+            <div>{props.reviewername}</div>
+            <div>{props.reviewdate}</div>
+            <div>{props.reviewtext}</div>
+            <div>{props.reviewrating}</div>
+        </div>
+ 
     );
 }
 

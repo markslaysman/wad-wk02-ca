@@ -1,16 +1,8 @@
 import classes from './ReviewsList.module.css';
 import Review from './Review';
 
-function ReviewsList () {
+function ReviewsList (props) {
     return (
-        <div>
-            <div>
-                Current Reviews Go Here
-            </div>
-            <div>
-                <Review />
-            </div>
-        </div>
     );
 }
 
