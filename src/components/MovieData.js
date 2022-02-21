@@ -7,7 +7,6 @@ import classes from './MovieData.module.css';
 import ReviewForm from './ReviewForm';
 import Review from './Review';
 
-
 function MovieData (props) {
     const navigate = useNavigate();
     const currentReviews = props.moviereviews;

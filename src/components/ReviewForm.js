@@ -16,7 +16,6 @@ function ReviewForm (props) {
         const enteredRating = reviewerRatingRef.current.value;
         const enteredReviewText = reviewTextRef.current.value;
 
-
         let currentDate = new Date();
         let reviewMonth = String(currentDate.getMonth() + 1);
         let reviewDay = String(currentDate.getDate());
