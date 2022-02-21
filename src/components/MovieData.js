@@ -2,10 +2,11 @@
 import { useNavigate } from "react-router-dom";
 
 // My Imports
-import classes from './MovieData.module.css';
 import Card from './globalui/Card';
-import Review from './Review';
+import classes from './MovieData.module.css';
 import ReviewForm from './ReviewForm';
+import Review from './Review';
+
 
 function MovieData (props) {
     const navigate = useNavigate();
@@ -36,23 +37,29 @@ function MovieData (props) {
 
     return (
         <section>
-            <Card>
-                <div className={classes.container}>
-                    <div className={classes.title}>
-                        {props.title}
+            <div className={classes.mainarea}>
+                <Card>
+                    <div className={classes.moviecontainer}>
+                        <div className={classes.title}>
+                            {props.title}
+                        </div>
+                        <div className={classes.poster}>
+                            <img className={classes.posterimage} src={props.image} alt={props.title} />
+                        </div>
+                        <div className={classes.plot}>
+                            {/*  {props.shortplot} */ }
+                            {props.fullplot}
+                        </div>
+                        <div className={classes.rating}>
+                            Overall Rating: {props.rating} / 5
+                        </div>
                     </div>
-                    <div className={classes.poster}>
-                        <img className={classes.posterimage} src={props.image} alt={props.title} />
-                    </div>
-                    <div className={classes.plot}>
-                        {/*  {props.shortplot} */ }
-                        {props.fullplot}
-                    </div>
-                    <div className={classes.rating}>
-                        Overall Rating: {props.rating} / 5
-                    </div>
+                </Card>
+                
+                <div>
+                    <ReviewForm onAddReview={addReviewHandler} />
                 </div>
-            </Card>
+            </div>
 
             <div>
                 {props.moviereviews.map((review) => (
@@ -66,9 +73,7 @@ function MovieData (props) {
                 ))}
             </div>
 
-            <div>
-                <ReviewForm onAddReview={addReviewHandler} />
-            </div>
+
 
         </section>
     );

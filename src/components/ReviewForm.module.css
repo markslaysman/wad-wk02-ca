@@ -3,17 +3,36 @@
 
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 
 	width: 40vw;
 	height: 100%;
 
 	margin: 0px;
+}
+
+.reviewbasicinfo {
+	display: flex;
+	margin: px 0px 10px 0px;
 	border: 0px;
 	padding: 0px;
 }
 
-.reviewtitle {
+.reviewerinfo {
+	flex-grow: 1;
+	justify-self: flex-start;
+	margin: 0px 5px 0px 10px;
+	border: 0px;
+	padding: 0px;
+}
+
+.reviewerrating {
+	flex-grow: 1;
+	margin: 0px 10px 0px 5px;
+	border: 0px;
+	padding: 0px;
+}
+`2400 .reviewtitle {
+	align-self: center;
 	justify-self: center;
 
 	margin: 10px 0px 10px 0px;
@@ -23,7 +42,10 @@
 
 .reviewtextarea {
 	flex-grow: 1;
-	width: 90%;
+	width: 100%;
+	margin: 0px 10px 10px 10px;
+	border: 0px;
+	padding: 0px;
 }
 .reviewformtext {
 	width: 90%;

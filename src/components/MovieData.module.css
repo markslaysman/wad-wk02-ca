@@ -1,4 +1,8 @@
-.container {
+.mainarea {
+	display: flex;
+}
+
+.moviecontainer {
 	display: grid;
 	/* grid-template-columns: auto auto auto; */
 	column-gap: 10px;

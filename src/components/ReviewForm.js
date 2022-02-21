@@ -33,11 +33,15 @@ function ReviewForm (props) {
                     <div className={classes.reviewtitle}>
                         What did you think of this movie?
                     </div>
-                    <div>
-                        <label htmlFor="reviewername">Name: </label>
-                        <input type="text" id="reviewername" ref={reviewerNameRef} placeholder='Enter your name'/>
-                        <label htmlFor="reviewerrating">Rating: </label>
-                        <input type="text" id="reviewerrating" ref={reviewerRatingRef} placeholder='5' />
+                    <div className={classes.reviewbasicinfo}>
+                        <div className={classes.reviewerinfo}>
+                            <label htmlFor="reviewername">Name: </label>
+                            <input type="text" id="reviewername" ref={reviewerNameRef} placeholder='Enter your name'/>
+                        </div>
+                        <div className={classes.reviewerrating}>
+                            <label htmlFor="reviewerrating">Rating: </label>
+                            <input type="text" id="reviewerrating" ref={reviewerRatingRef} placeholder='5' />
+                        </div>
                     </div>
                     <div className={classes.reviewtextarea}>
                         <textarea className={classes.reviewformtext} ref={reviewTextRef} placeholder='Enter Your Review Here...'></textarea>
