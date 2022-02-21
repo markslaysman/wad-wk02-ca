@@ -55,10 +55,8 @@ function MovieData (props) {
                         </div>
                     </div>
                 </Card>
-                
-                <div>
-                    <ReviewForm onAddReview={addReviewHandler} />
-                </div>
+
+                <ReviewForm onAddReview={addReviewHandler} />
             </div>
 
             <div>
@@ -72,9 +70,6 @@ function MovieData (props) {
                     />
                 ))}
             </div>
-
-
-
         </section>
     );
 }

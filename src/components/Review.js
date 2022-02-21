@@ -3,12 +3,18 @@ import Card from './globalui/Card';
 
 function Review (props) {
     return (
-         <div className={classes.reviewdata}>
-            <div>{props.reviewername}</div>
-            <div>{props.reviewdate}</div>
-            <div>{props.reviewtext}</div>
-            <div>{props.reviewrating}</div>
-        </div>
+        <Card>
+            <div className={classes.reviewdata}>
+                <div className={classes.reviewerinfo}>
+                    <div>Name: {props.reviewername}</div>
+                    <div>Review Date: {props.reviewdate}</div>
+                    <div>Rating: {props.reviewrating}</div>
+                </div>
+                <div className={classes.reviewtext}>
+                    <div>{props.reviewtext}</div>
+                </div>
+            </div>
+        </Card>
  
     );
 }

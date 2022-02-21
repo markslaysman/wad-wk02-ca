@@ -7,12 +7,10 @@ import LoadingPage from './pages/LoadingPage';
 
 function App() {
   return (
-    <div>
       <Routes>
         <Route path='/' element={<AllMoviesPage />} />
         <Route path='/loadingpage' element={<LoadingPage />} />
       </Routes>
-    </div>
   );
 }
 

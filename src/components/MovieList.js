@@ -4,7 +4,6 @@ import classes from './MovieList.module.css';
 function MovieList (props) {
 
     return (
-        <section>
             <div className={classes.container}>
                 {props.movies.map((movie) => (
                     <MovieData
@@ -19,8 +18,6 @@ function MovieList (props) {
                     />
                 ))}
             </div>
-
-        </section>
     );
 }
 

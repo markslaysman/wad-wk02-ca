@@ -12,26 +12,27 @@
 
 .reviewbasicinfo {
 	display: flex;
-	margin: px 0px 10px 0px;
+	margin: 0px 10px 10px 10px;
 	border: 0px;
 	padding: 0px;
 }
 
 .reviewerinfo {
-	flex-grow: 1;
-	justify-self: flex-start;
-	margin: 0px 5px 0px 10px;
+	margin: 0px 0px 0px 0px;
 	border: 0px;
 	padding: 0px;
 }
 
-.reviewerrating {
-	flex-grow: 1;
-	margin: 0px 10px 0px 5px;
+.reviewerratinginfo {
+	display: flex;
+	margin: 0px 0px 0px 0px;
 	border: 0px;
 	padding: 0px;
+
+	margin-left: auto;
 }
-`2400 .reviewtitle {
+
+.reviewtitle {
 	align-self: center;
 	justify-self: center;
 
@@ -41,20 +42,25 @@
 }
 
 .reviewtextarea {
-	flex-grow: 1;
-	width: 100%;
 	margin: 0px 10px 10px 10px;
+	flex-grow: 1;
 	border: 0px;
 	padding: 0px;
 }
 .reviewformtext {
-	width: 90%;
-	height: 97%;
+	width: 100%;
+	height: 100%;
+
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+
+	box-shadow: 5px 5px lightgrey;
 }
 
 .reviewbutton {
-	grid-area: rating;
-	justify-self: center;
+	display: flex;
+	justify-content: center;
 
 	margin: 0px 0px 10px 0px;
 }
